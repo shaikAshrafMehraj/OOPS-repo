@@ -1,0 +1,6 @@
+Advantage of OOPs
+> create an own datatype
+> code reuseability 
+> debugging
+> easy to colab
+1. classes and objects
