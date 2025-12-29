@@ -17,15 +17,15 @@ class Chatbook:
         elif userInput == "2":
             self.signIn()
         elif userInput == "3":
-            pass
+            self.my_post()
         elif userInput == "4":
-            pass
+            self.sendMSG()
         else :
             exit()
 
     def signUp(self):
-        email = input("Enter the email here :")
-        pwd = input("Enter the pwd here :")
+        email = input("Set the email here :")
+        pwd = input("Set the pwd here :")
         self.userName = email
         self.passWord = pwd
         print("You have signed successfully ..")
@@ -43,6 +43,25 @@ class Chatbook:
                 self.loggedIn = True
             else :
                 print("Please input correct credentials..")
+        print("\n")
+        self.menu()
+
+    def my_post(self):
+        if self.loggedIn == True:
+            txt = input("Enter the message down here =>: \n")
+            print(f"your post is {txt}")
+        else:
+            print("you need to signin first to post something")
+        print("\n")
+        self.menu()
+
+    def sendMSG(self):
+        if self.loggedIn == True:
+            txt = input("Enter the message here=>")
+            frnd = input("Enter the name of the friend => ")
+            print(f"The message is sent to friend {txt}")
+        else:
+            print("you need to signin first to post something")
         print("\n")
         self.menu()
 
